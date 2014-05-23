@@ -56,15 +56,15 @@
       <div ng-if="!cv.collapse.service" class="row">
 	<div class="col-md-2">
 	  <div class="control-label fr-control-label">server</div>
-	  <input type="text" ng-model="cv.server" ng-change="clear_results()" class="form-control" placeholder="localhost">
+	  <input type="text" ng-model="cv.server" ng-change="config_load()" class="form-control" placeholder="localhost">
 	</div>
 	<div class="col-md-2">
 	  <div class="control-label fr-control-label">port</div>
-	  <input type="text" ng-model="cv.port" ng-change="clear_results()" class="form-control" placeholder="8001">
+	  <input type="text" ng-model="cv.port" ng-change="config_load()" class="form-control" placeholder="8001">
 	</div>
 	<div class="col-md-2">
 	  <div class="control-label fr-control-label">service</div>
-	  <input type="text" ng-model="cv.service" ng-change="clear_results()" class="form-control" placeholder="localhost">
+	  <input type="text" ng-model="cv.service" ng-change="config_load()" class="form-control" placeholder="localhost">
 	</div>
       </div>
       <div class="row fr-data-label">
