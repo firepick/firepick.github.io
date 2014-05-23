@@ -148,8 +148,7 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
 	  }
 	});
       }
-
-    bg.worker = function(ticks) {
+    scope.worker = function(ticks) {
      if (scope.transmit_isIdle() && scope.transmit_enabled) {
        if ((ticks % 5) === 0 ) {
 	 scope.cv.resources.indexOf('process') >= 0 && scope.resource_GET('process');
@@ -161,6 +160,7 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
      }
      return true;
     }
+
 
     scope.config_load = function() {
       console.log("Loading config.json from " + scope.config_url());
@@ -182,6 +182,7 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
 	      cv.profile_name = cv.profile_names[0];
 	      cv.cve_name = scope.cve_names()[0] || "no-CVE";
 	      scope.clear_results();
+	      bg.worker = scope.worker;
 	    }
 	  });
 	},
