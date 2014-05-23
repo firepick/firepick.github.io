@@ -163,6 +163,7 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
     }
 
     scope.config_load = function() {
+      console.log("Loading config.json from " + scope.config_url());
       scope.transmit_start();
       $.ajax({
 	url: scope.config_url(),
