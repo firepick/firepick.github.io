@@ -1,11 +1,105 @@
-<!doctype HTML>
-<html>
-<head>
-<link rel="stylesheet" href="bootstrap/3.1.1/css/bootstrap.min.css">
-</head>
-<body>
-<h1>FirePick</h1>
-(TBD)
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FirePick</title>
+    <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/firepick.css">
+  </head>
+  <body>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="https://github.com/firepick1/FirePick/wiki">
+        <img class="logo" src="img/firepick.png" >
+      </a>
+    </div>
 
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Link</a></li>
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+            <li class="divider"></li>
+            <li><a href="#">One more separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Link</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <h3>FirePick SMD Pick-and-Place Machine Kits</h3>
+    <p>Build your own FirePick SMD pick-and-place (PnP) machine!
+
+    <p>FireSight pick and place machine kits are:
+    <ul>
+    <li><b>open source.</b> Designs are provided under the MIT license.
+    <li><b>low cost.</b> Entry-level FirePick designs for hobbyists are &lt;USD 499.
+    <li><b>easy to assemble.</b> FirePick kits only require hand tools.  Power tools save you time but aren't required.
+    <li><b>open supply chain.</b> Purchase your parts directly from approved vendors and reduce middleman costs.
+    <li><b>verified.</b> Each FirePick finalized design has been verified from purchase through assembly and tested 
+      with documented specifications.
+    </ul>
+
+    <hr>
+    <h3>Neil/Karl TODO list</h3>
+    A list of things for Neil/Karl to do...
+
+    <h3>FirePick Delta 1.0</h3>
+    Following are the minimum requirements for FirePick Delta 1.0.
+    <ul>
+    <li>Awesome video (Neil)
+    <li>Make article (Neil)
+    <li>Build actual machine that can place 1206 components (Neil)
+    <li>Document BOM and assembly (Karl)
+    <li>Rebuild Neil's machine from documentation (Karl)
+    <li>GCODE interpreter: Marlin (Neil)
+    <li>GUI Controller: OpenPnP (Jason existing)
+    <li>Vision calibration: FireSight (Karl)
+    <li>integrate FireFuse with FireSight (Karl)
+    <li>FirePiCam JPG capture 800x200 BGR @600ms (Karl)
+    <li>integrate FireMote with OpenPnP as a simple REST service with no web GUI(Karl)
+    <li>Raspbian apt-get package for all software (Karl)
+    <li>tbd
+    </ul>
+
+    <h3>FirePick Delta 2.0</h3>
+
+  </body>
 <!/html>
