@@ -194,6 +194,8 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
 	}
       });
     };
+
+    scope.clear_results();
     scope.config_load();
 
 }]);
