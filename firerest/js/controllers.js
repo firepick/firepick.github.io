@@ -6,10 +6,11 @@ var controllers = angular.module('FireREST.controllers', []);
 controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
   function(scope, location, bg) {
     scope.cv = {
-      "resources":['save', 'process'],
+      "resources":['save.fire', 'process.fire'],
       "image":[],
       "server":location.host() || "unknownhost",
       "port":location.port() || "unknownport",
+      "post_data":{},
       "service": "/firerest",
       "collapse": {"camera":true, "cve":true, "service":true},
       "image_instances":{},
@@ -110,10 +111,10 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
       return scope.resource_response[resource] || " ";
     }
     scope.resource_path = function(resource) {
-      return "/cv/" + scope.cv.camera_name + "/" + scope.cv.profile_name + "/cve/" + scope.cv.cve_name + "/" + resource + ".json";
+      return "/cv/" + scope.cv.camera_name + "/" + scope.cv.profile_name + "/cve/" + scope.cv.cve_name + "/" + resource ;
     };
     scope.resource_url = function(resource) {
-      return scope.camera_url() + scope.cv.profile_name + "/cve/" + scope.cv.cve_name + "/" + resource + ".json";
+      return scope.camera_url() + scope.cv.profile_name + "/cve/" + scope.cv.cve_name + "/" + resource ;
     };
     scope.resource_class = function(resource) {
       return scope.resource_classname[resource] || "fr-json-ok";
@@ -123,35 +124,63 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
         //console.log('resource_XHR' + resource + response);
 	scope.resource_response[resource] = response;
 	scope.resource_classname[resource] = classname;
-	var t = Math.floor(Math.random()*1000000) ;
-	scope.cv.image_instances['camera.jpg'] = t;
-	scope.cv.image_instances['monitor.jpg'] = t;
-	resource === 'save' && (scope.cv.image_instances['saved.png'] = t);
-	resource === 'process' && (scope.cv.image_instances['output.jpg'] = t);
+        if (resource === 'save.fire' || resource === 'process.fire') {
+	  var t = Math.floor(Math.random()*1000000) ;
+	  scope.cv.image_instances['monitor.jpg'] = t;
+	  resource === 'save.fire' && (scope.cv.image_instances['saved.png'] = t);
+	  resource === 'process.fire' && (scope.cv.image_instances['output.jpg'] = t);
+	}
+
 	scope.transmit_end(true);
       });
     }
     scope.resource_GET_icon = function(action) {
-      return scope.transmit_enabled && (action === "process") ?
+      return scope.transmit_enabled && (action === "process.fire") ?
         "glyphicon glyphicon-repeat" : "";
     }
     scope.resource_GET = function(resource) {
-	scope.transmit_start();
-	$.ajax({
-	  url: scope.resource_url(resource),
-	  data: { r: Math.floor(Math.random()*1000000) },
-	  success: function( data ) {
-	    scope.resource_XHR(resource, "fr-json-ok", JSON.stringify(data), true);
-	  },
-	  error: function( jqXHR, ex) {
-	    scope.resource_XHR(resource, "fr-json-err", JSON.stringify(jqXHR), false);
-	  }
-	});
+      scope.transmit_start();
+      $.ajax({
+	url: scope.resource_url(resource),
+	data: { r: Math.floor(Math.random()*1000000) },
+	success: function( data ) {
+	  scope.resource_XHR(resource, "fr-json-ok", JSON.stringify(data), true);
+	},
+	error: function( jqXHR, ex) {
+	  scope.resource_XHR(resource, "fr-json-err", JSON.stringify(jqXHR), false);
+	}
+      });
+    }
+    scope.isValidJSON = function(value) {
+      try {
+	JSON.parse(value);
+      } catch (e) {
+	return false;
       }
+      return true;
+    }
+    scope.resource_POST = function(resource) {
+      scope.transmit_start();
+      var data = scope.cv.post_data[resource];
+      $.ajax({
+        type:"POST",
+	url: scope.resource_url(resource),
+	data: data,
+	success: function() {
+	  scope.resource_XHR(resource, "fr-json-ok", data, true);
+	},
+	error: function( jqXHR, ex) {
+	  scope.resource_XHR(resource, "fr-json-err", JSON.stringify(jqXHR), false);
+	}
+      });
+    }
+    scope.resource_isPOST = function(resource) {
+      return resource === 'properties.json';
+    }
     scope.worker = function(ticks) {
      if (scope.transmit_isIdle() && scope.transmit_enabled) {
        if ((ticks % 5) === 0 ) {
-	 scope.cv.resources.indexOf('process') >= 0 && scope.resource_GET('process');
+	 scope.cv.resources.indexOf('process.fire') >= 0 && scope.resource_GET('process.fire');
        } else if ((ticks % 3) === 0 ) {
 	 scope.image_GET('monitor.jpg');
        } else if ((ticks % 3) === 1 ) {
@@ -164,6 +193,7 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
 
     scope.config_load = function() {
       console.log("Loading config.json from " + scope.config_url());
+      scope.config = {"status":"loading..."};
       scope.transmit_start();
       $.ajax({
 	url: scope.config_url(),
@@ -191,6 +221,7 @@ controllers.controller('MainCtrl', ['$scope','$location', 'BackgroundThread',
 	  scope.$apply(function(){
 	    scope.transmit_end(false);
 	    scope.cv.camera_names = ["camera n/a"];
+	    scope.clear_results();
 	  });
 	}
       });
