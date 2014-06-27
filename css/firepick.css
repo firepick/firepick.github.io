@@ -6,12 +6,13 @@ p {
   vertical-align: middle;
 }
 .fp-main{
+  font-size: 18pt;
   margin-left: auto;
   margin-right: auto;
-  background: pink;
-  width: 700px;
+  width: 500px;
 }
 .fp-title {
+ margin-top: 10%;
  font-size: 20pt;
  font-style: italic;
  text-align: center;
