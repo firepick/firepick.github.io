@@ -3,6 +3,7 @@ p {
 }
 .fp-main{
   margin:auto;
+  vertical-align: middle;
 }
 .fp-title {
  font-size: 32pt;
