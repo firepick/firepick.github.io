@@ -1,10 +1,16 @@
 p {
   max-width: 700px;
 }
+.fp-main{
+ margin-left: auto;
+ margin-right: auto;
+}
 .fp-title {
- font: 20pt Arial;
+ font-size: 32pt;
  font-style: italic;
  text-align: center;
+ margin-left: auto;
+ margin-right: auto;
 }
 .logo {
   border: 5px red;
