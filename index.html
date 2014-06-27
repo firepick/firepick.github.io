@@ -1,42 +1,29 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>FirePick</title>
-  <link rel="stylesheet" href="bootstrap-3.1.1-dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/firepick.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FireREST&trade;</title>
+  <link rel="stylesheet" href="css/firepick.css"/>
+  <link rel="stylesheet" href="firerest/bootstrap/css/bootstrap.css"/>
+  <script src="firerest/bootstrap/js/ui-bootstrap-0.6.0.min.js"></script>
+  <script src="firerest/bootstrap/js/ui-bootstrap-tpls-0.6.0.min.js"></script>
 </head>
-<body>
-  <div>
-    <img src="img/firepick.png">
+<body ng-controller="MainCtrl">
+  <div class="fp-body">
+    <div class="fp-title">
+      <img src="img/firepick.png">
+    </div>
+    <div class="fp-title">The open source micro-factory</div>
+    <div class="fp-features">
+      <ul>
+	<li><a href=firepick-delta/index.html>FirePick Delta</a> A delta manufacturing robot with pick-and-place (PnP) and 3D-printing capabilities
+	<li><a href=https://github.com/firepick1/FireREST/wiki>
+	  <img class="fp-feature-logo" src="firerest/img/FireREST-alpha.png">
+	  </a> A REST protocol for coordinating machine vision, sensing and control.
+	<li><a href=https://github.com/firepick1/FireSight/wiki>FireSight</a> Create custom computer vision pipelines without programming
+      </ul>
+    </div>
   </div>
-  <h3>FirePick SMD Pick-and-Place Machine Kits</h3>
-  <p>Build your own FirePick SMD pick-and-place (PnP) machine!
-
-  <p>FireSight pick and place machine kits are:
-  <ul>
-  <li><b>open source.</b> Designs are provided under the MIT license.
-  <li><b>low cost.</b> Entry-level FirePick designs for hobbyists are &lt;USD 499.
-  <li><b>easy to assemble.</b> FirePick kits only require hand tools.  Power tools save you time but aren't required.
-  <li><b>open supply chain.</b> Purchase your parts directly from approved vendors and reduce middleman costs.
-  <li><b>verified.</b> Each FirePick finalized design has been verified from purchase through assembly and tested 
-    with documented specifications.
-  </ul>
-
-  <h3>Kits</h3>
-  <ul>
-    <li>FirePick Delta (coming soon)
-  </ul>
-
-  <h3>Software</h3>
-  Monitor and control FirePick with your web browser.
-  <ul>
-  <li> Monitor FirePick computer vision in action. <a target="_blank" href="firerest/cvtest.html">FireREST&trade; CV Demo</a>
-  <li> Control FirePick pick-and-place jobs. (TBD)
-  <li> Control FirePick 3D printing jobs. (TBD)
-  </ul>
-
 </body>
-<!/html>
+</html>
