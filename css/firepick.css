@@ -9,6 +9,7 @@ p {
   margin-left: auto;
   margin-right: auto;
   background: pink;
+  width: 700px;
 }
 .fp-title {
  font-size: 20pt;
