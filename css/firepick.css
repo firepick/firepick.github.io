@@ -6,18 +6,19 @@ p {
   margin:auto;
   vertical-align: middle;
 }
-.fp-main{
-  font-size: 18pt;
-  margin-left: auto;
-  margin-right: auto;
-  width: 500px;
-}
 .fp-title {
-  font-size: 32pt;
+  font-size: 26pt;
   font-style: italic;
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+}
+.fp-features{
+  font-size: 18pt;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
 }
 .logo {
   border: 5px red;
