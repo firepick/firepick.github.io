@@ -25,6 +25,13 @@ p {
   padding-right: 0;
   display: inline-block;
 }
+.fp-grid{
+  font-size: 18pt;
+  margin-top: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  width: 190mm;
+}
 .fp-features{
   font-size: 18pt;
   margin-top: 1em;
