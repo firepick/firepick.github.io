@@ -28,6 +28,10 @@ p {
   padding-right: 0;
   display: inline-block;
 }
+.fp-grid-instructions{
+  font-size: 10pt;
+  font-weight: normal;
+}
 .fp-grid-header{
   font-size: 12pt;
   font-weight: bold;
