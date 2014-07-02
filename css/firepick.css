@@ -6,6 +6,9 @@ p {
   margin:auto;
   vertical-align: middle;
 }
+.fp-logo-inline {
+  height: 20pt;
+}
 .fp-logo {
   text-align: center;
   margin-left: auto;
@@ -26,7 +29,7 @@ p {
   display: inline-block;
 }
 .fp-grid-header{
-  font-size: 18pt;
+  font-size: 16pt;
   font-weight: bold;
   margin-top: 1em;
   margin-left: 1em;
