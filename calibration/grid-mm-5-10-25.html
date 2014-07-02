@@ -15,16 +15,18 @@
 <body ng-controller="MainCtrl">
   <div class="fp-grid-header">
     <img src="/img/firepick.png">
-    <h4>FirePick&trade; Printable 5/10/25mm Calibration Grid</h4>
+    <h4>FirePick&trade; Printable 5mm Calibration Grid</h4>
   </div>
   <div class="fp-grid">
     <svg width="190mm" height="190mm" >
       <line x1=0 y1=0 x2="5mm" y2=0 stroke="black" stroke-width="1"/>
-      <text x="1mm" y="18">0</text>
+      <text x="1mm" y="17">0</text>
       <line x1="50mm" y1=0 x2="50mm" y2="5mm" stroke="black" stroke-width="1"/>
-      <text x="51mm" y="20">50</text>
+      <text x="51mm" y="17">50</text>
       <line x1="100mm" y1=0 x2="100mm" y2="5mm" stroke="black" stroke-width="1"/>
-      <text x="101mm" y="18">100</text>
+      <text x="101mm" y="17">100</text>
+      <line x1="150mm" y1=0 x2="150mm" y2="5mm" stroke="black" stroke-width="1"/>
+      <text x="151mm" y="17">150</text>
 
        <line x1="5mm" y1="5mm" x2="185mm" y2="5mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
        <line x1="5mm" y1="10mm" x2="185mm" y2="10mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
@@ -65,11 +67,13 @@
        <line x1="5mm" y1="185mm" x2="185mm" y2="185mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
 
 	<line x1=0 y1=0 x2="0mm" y2="5mm" stroke="black" stroke-width="1"/>
-	<text x="0" y="1mm" transform="translate(18)">0</text>
+	<text x="0" y="1mm" transform="translate(0,18)">0</text>
 	<line x1="0" y1="50mm" x2="5mm" y2="50mm" stroke="black" stroke-width="1"/>
-	<text x="1mm" y="20" transform="translate(18)">50</text>
+	<text x="0mm" y="50mm" transform="translate(0,18)">50</text>
 	<line x1="0mm" y1="100mm" x2="5mm" y2="100mm" stroke="black" stroke-width="1"/>
-	<text x="1mm" y="100mm" transform="translate(18)">100</text>
+	<text x="0mm" y="100mm" transform="translate(0,18)">100</text>
+	<line x1="0mm" y1="150mm" x2="5mm" y2="150mm" stroke="black" stroke-width="1"/>
+	<text x="0mm" y="150mm" transform="translate(0,18)">150</text>
 
        <line y1="5mm" x1="5mm" y2="185mm" x2="5mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
        <line y1="5mm" x1="10mm" y2="185mm" x2="10mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
