@@ -14,8 +14,12 @@
 </head>
 <body ng-controller="MainCtrl">
   <div class="fp-grid-header">
-    <img class="fp-logo-inline" src="/img/firepick.png">
-    Printable 5mm Calibration Grid
+    <img class="fp-logo-inline" src="/img/firepick.png"> Print this 5mm calibration grid
+    <ol>
+      <li>Use micrometer to measure distance to X1 (use X2 or X3 if X1 is too far)
+      <li>Use micrometer to measure distance to Y1 (use Y2 or Y3 if Y1 is too far)
+      <li>Calibrate your machine: <a href="http://firepick:8080/firerest/calibrate.html">http://firepick:8080/firerest/calibrate.html</a>
+    </ol>
   </div>
   <div class="fp-grid">
     <svg width="190mm" height="190mm" >
@@ -23,11 +27,11 @@
 	<line x1="5mm" y1="5mm" x2="5mm" y2=0 stroke="black" stroke-width="1"/>
 	<text x="0mm" y="17">0</text>
 	<line x1="55mm" y1=0 x2="55mm" y2="5mm" stroke="black" stroke-width="1"/>
-	<text x="56mm" y="17">50x</text>
+	<text x="56mm" y="17">X1</text>
 	<line x1="105mm" y1=0 x2="105mm" y2="5mm" stroke="black" stroke-width="1"/>
-	<text x="106mm" y="17">100x</text>
+	<text x="106mm" y="17">X2</text>
 	<line x1="155mm" y1=0 x2="155mm" y2="5mm" stroke="black" stroke-width="1"/>
-	<text x="156mm" y="17">150x</text>
+	<text x="156mm" y="17">X3</text>
 
 	<line x1="5mm" y1="5mm" x2="185mm" y2="5mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
 	<line x1="5mm" y1="10mm" x2="185mm" y2="10mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
@@ -69,11 +73,11 @@
 
 	<line x1="0mm" y1="5mm" x2="5mm" y2="5mm" stroke="black" stroke-width="1"/>
 	<line x1="0" y1="55mm" x2="5mm" y2="55mm" stroke="black" stroke-width="1"/>
-	<text x="0mm" y="55mm" transform="rotate(-10) translate(18)">50y</text>
+	<text x="0mm" y="55mm">Y1</text>
 	<line x1="0mm" y1="105mm" x2="5mm" y2="105mm" stroke="black" stroke-width="1"/>
-	<text x="0mm" y="105mm" transform="rotate(-10) translate(0,-18)">100y</text>
+	<text x="0mm" y="105mm">Y2</text>
 	<line x1="0mm" y1="155mm" x2="5mm" y2="155mm" stroke="black" stroke-width="1"/>
-	<text x="0mm" y="155mm" transform="rotate(-10) translate(0,18)">150y</text>
+	<text x="0mm" y="155mm">Y3</text>
 
 	<line y1="5mm" x1="5mm" y2="185mm" x2="5mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
 	<line y1="5mm" x1="10mm" y2="185mm" x2="10mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
