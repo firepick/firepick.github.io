@@ -14,111 +14,217 @@
 </head>
 <body ng-controller="MainCtrl">
   <div class="fp-grid-header">
-    <img class="fp-logo-inline" src="/img/firepick.png"> Print this 5mm calibration grid
+    <img class="fp-logo-inline" src="../img/firepick.png"> Print this 5 calibration grid
     <ol class="fp-grid-instructions">
-      <li>Use micrometer to measure distance to X1 (use X2 or X3 if X1 is too far)
-      <li>Use micrometer to measure distance to Y1 (use Y2 or Y3 if Y1 is too far)
-      <li><a href="http://firepick:8080/firerest/calibrate.html">Calibrate your machine</a>
+      <li>Measure largest distance allowed by micrometer between a pair of X's
+      <li>Measure largest distance allowed by micrometer between a pair of Y's
+      <li><a href="http://firepick:8080/firerest/html/cal/">Calibrate your machine</a>
     </ol>
   </div>
   <div class="fp-grid">
-    <svg width="190mm" height="195mm" >
-      <g font-size="14" font-family="Verdana">
-	<line x1="5mm" y1="5mm" x2="5mm" y2=0 stroke="black" stroke-width="1"/>
-	<text x="7mm" y="15">measure&#x2794;</text>
-	<line x1="55mm" y1=0 x2="55mm" y2="5mm" stroke="black" stroke-width="1"/>
-	<text x="56mm" y="17">X3</text>
-	<line x1="105mm" y1=0 x2="105mm" y2="5mm" stroke="black" stroke-width="1"/>
-	<text x="106mm" y="17">X2</text>
-	<line x1="155mm" y1=0 x2="155mm" y2="5mm" stroke="black" stroke-width="1"/>
-	<text x="156mm" y="17">X1</text>
+    <svg width="194mm" height="204mm" viewbox="-97 -102 194 204">
+      <g stroke-linecap="round" font-size="3" font-family="Verdana">
 
-	<text x="7mm" y="15" transform="rotate(90) translate(0, -17)">measure&#x2794;</text>
-	<line x1="0mm" y1="5mm" x2="5mm" y2="5mm" stroke="black" stroke-width="1"/>
-	<line x1="0" y1="55mm" x2="5mm" y2="55mm" stroke="black" stroke-width="1"/>
-	<text x="0mm" y="55mm">Y3</text>
-	<line x1="0mm" y1="105mm" x2="5mm" y2="105mm" stroke="black" stroke-width="1"/>
-	<text x="0mm" y="105mm">Y2</text>
-	<line x1="0mm" y1="155mm" x2="5mm" y2="155mm" stroke="black" stroke-width="1"/>
-	<text x="0mm" y="155mm">Y1</text>
+	<line x1="-1000" y1="0" x2="1000" y2="0" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="0" y2="1000" x2="0" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
 
-	<line x1="5mm" y1="5mm" x2="185mm" y2="5mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="10mm" x2="185mm" y2="10mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="15mm" x2="185mm" y2="15mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="20mm" x2="185mm" y2="20mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="25mm" x2="185mm" y2="25mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="30mm" x2="185mm" y2="30mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="35mm" x2="185mm" y2="35mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="40mm" x2="185mm" y2="40mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="45mm" x2="185mm" y2="45mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="50mm" x2="185mm" y2="50mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="55mm" x2="185mm" y2="55mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="60mm" x2="185mm" y2="60mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="65mm" x2="185mm" y2="65mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="70mm" x2="185mm" y2="70mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="75mm" x2="185mm" y2="75mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="80mm" x2="185mm" y2="80mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="85mm" x2="185mm" y2="85mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="90mm" x2="185mm" y2="90mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="95mm" x2="185mm" y2="95mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="100mm" x2="185mm" y2="100mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="105mm" x2="185mm" y2="105mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="110mm" x2="185mm" y2="110mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="115mm" x2="185mm" y2="115mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="120mm" x2="185mm" y2="120mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="125mm" x2="185mm" y2="125mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="130mm" x2="185mm" y2="130mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="135mm" x2="185mm" y2="135mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="140mm" x2="185mm" y2="140mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="145mm" x2="185mm" y2="145mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="150mm" x2="185mm" y2="150mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="155mm" x2="185mm" y2="155mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="160mm" x2="185mm" y2="160mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="165mm" x2="185mm" y2="165mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="170mm" x2="185mm" y2="170mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="175mm" x2="185mm" y2="175mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="180mm" x2="185mm" y2="180mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="185mm" x2="185mm" y2="185mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="190mm" x2="185mm" y2="190mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line x1="5mm" y1="195mm" x2="185mm" y2="195mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
+	<line x1="25" y1="-5"  x2="25" y2="5" stroke="red" stroke-width="0.25"/>
+	<line x1="50" y1="-5"  x2="50" y2="5" stroke="red" stroke-width="0.25"/>
 
-	<line y1="5mm" x1="5mm" y2="195mm" x2="5mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="10mm" y2="195mm" x2="10mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="15mm" y2="195mm" x2="15mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="20mm" y2="195mm" x2="20mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="25mm" y2="195mm" x2="25mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="30mm" y2="195mm" x2="30mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="35mm" y2="195mm" x2="35mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="40mm" y2="195mm" x2="40mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="45mm" y2="195mm" x2="45mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="50mm" y2="195mm" x2="50mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="55mm" y2="195mm" x2="55mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="60mm" y2="195mm" x2="60mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="65mm" y2="195mm" x2="65mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="70mm" y2="195mm" x2="70mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="75mm" y2="195mm" x2="75mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="80mm" y2="195mm" x2="80mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="85mm" y2="195mm" x2="85mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="90mm" y2="195mm" x2="90mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="95mm" y2="195mm" x2="95mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="100mm" y2="195mm" x2="100mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="105mm" y2="195mm" x2="105mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="110mm" y2="195mm" x2="110mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="115mm" y2="195mm" x2="115mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="120mm" y2="195mm" x2="120mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="125mm" y2="195mm" x2="125mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="130mm" y2="195mm" x2="130mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="135mm" y2="195mm" x2="135mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="140mm" y2="195mm" x2="140mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="145mm" y2="195mm" x2="145mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="150mm" y2="195mm" x2="150mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="155mm" y2="195mm" x2="155mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="160mm" y2="195mm" x2="160mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="165mm" y2="195mm" x2="165mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="170mm" y2="195mm" x2="170mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="175mm" y2="195mm" x2="175mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="180mm" y2="195mm" x2="180mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
-	<line y1="5mm" x1="185mm" y2="195mm" x2="185mm" stroke="black" stroke-dasharray="1mm,1mm" stroke-width="1"/>
+	<!-- HORIZONTAL GRID -->
+	<line x1="-1000" y1="-200" x2="1000" y2="-200" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-195" x2="1000" y2="-195" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-190" x2="1000" y2="-190" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-185" x2="1000" y2="-185" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-180" x2="1000" y2="-180" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-175" x2="1000" y2="-175" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-170" x2="1000" y2="-170" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-165" x2="1000" y2="-165" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-160" x2="1000" y2="-160" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-155" x2="1000" y2="-155" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-150" x2="1000" y2="-150" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-145" x2="1000" y2="-145" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-140" x2="1000" y2="-140" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-135" x2="1000" y2="-135" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-130" x2="1000" y2="-130" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-125" x2="1000" y2="-125" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-120" x2="1000" y2="-120" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-115" x2="1000" y2="-115" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-110" x2="1000" y2="-110" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-105" x2="1000" y2="-105" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-100" x2="1000" y2="-100" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-95"  x2="1000" y2="-95" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-90"  x2="1000" y2="-90" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-85"  x2="1000" y2="-85" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-80"  x2="1000" y2="-80" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-75"  x2="1000" y2="-75" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-70"  x2="1000" y2="-70" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-65"  x2="1000" y2="-65" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-60"  x2="1000" y2="-60" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-55"  x2="1000" y2="-55" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-50"  x2="1000" y2="-50" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-45"  x2="1000" y2="-45" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-40"  x2="1000" y2="-40" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-35"  x2="1000" y2="-35" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-30"  x2="1000" y2="-30" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-25"  x2="1000" y2="-25" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-20"  x2="1000" y2="-20" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-15"  x2="1000" y2="-15" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-10"  x2="1000" y2="-10" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="-5"   x2="1000" y2="-5" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+
+	<line x1="-1000" y1="5" x2="1000" y2="5" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="10" x2="1000" y2="10" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="15" x2="1000" y2="15" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="20" x2="1000" y2="20" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="25" x2="1000" y2="25" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="30" x2="1000" y2="30" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="35" x2="1000" y2="35" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="40" x2="1000" y2="40" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="45" x2="1000" y2="45" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="50" x2="1000" y2="50" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="55" x2="1000" y2="55" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="60" x2="1000" y2="60" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="65" x2="1000" y2="65" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="70" x2="1000" y2="70" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="75" x2="1000" y2="75" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="80" x2="1000" y2="80" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="85" x2="1000" y2="85" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="90" x2="1000" y2="90" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="95" x2="1000" y2="95" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="100" x2="1000" y2="100" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="105" x2="1000" y2="105" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="110" x2="1000" y2="110" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="115" x2="1000" y2="115" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="120" x2="1000" y2="120" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="125" x2="1000" y2="125" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="130" x2="1000" y2="130" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="135" x2="1000" y2="135" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="140" x2="1000" y2="140" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="145" x2="1000" y2="145" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="150" x2="1000" y2="150" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="155" x2="1000" y2="155" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="160" x2="1000" y2="160" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="165" x2="1000" y2="165" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="170" x2="1000" y2="170" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="175" x2="1000" y2="175" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="180" x2="1000" y2="180" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="185" x2="1000" y2="185" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="190" x2="1000" y2="190" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="195" x2="1000" y2="195" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line x1="-1000" y1="200" x2="1000" y2="200" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+
+	<!-- VERTICAL GRID -->
+	<line y1="-1000" x1="-200" y2="1000" x2="-200" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-195" y2="1000" x2="-195" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-190" y2="1000" x2="-190" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-185" y2="1000" x2="-185" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-180" y2="1000" x2="-180" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-175" y2="1000" x2="-175" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-170" y2="1000" x2="-170" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-165" y2="1000" x2="-165" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-160" y2="1000" x2="-160" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-155" y2="1000" x2="-155" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-150" y2="1000" x2="-150" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-145" y2="1000" x2="-145" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-140" y2="1000" x2="-140" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-135" y2="1000" x2="-135" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-130" y2="1000" x2="-130" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-125" y2="1000" x2="-125" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-120" y2="1000" x2="-120" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-115" y2="1000" x2="-115" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-110" y2="1000" x2="-110" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-105" y2="1000" x2="-105" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-100" y2="1000" x2="-100" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-95"  y2="1000" x2="-95" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-90"  y2="1000" x2="-90" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-85"  y2="1000" x2="-85" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-80"  y2="1000" x2="-80" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-75"  y2="1000" x2="-75" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-70"  y2="1000" x2="-70" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-65"  y2="1000" x2="-65" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-60"  y2="1000" x2="-60" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-55"  y2="1000" x2="-55" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-50"  y2="1000" x2="-50" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-45"  y2="1000" x2="-45" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-40"  y2="1000" x2="-40" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-35"  y2="1000" x2="-35" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-30"  y2="1000" x2="-30" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-25"  y2="1000" x2="-25" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-20"  y2="1000" x2="-20" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-15"  y2="1000" x2="-15" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-10"  y2="1000" x2="-10" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="-5"   y2="1000" x2="-5" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+
+	<line y1="-1000" x1="5" y2="1000" x2="5" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="10" y2="1000" x2="10" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="15" y2="1000" x2="15" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="20" y2="1000" x2="20" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="25" y2="1000" x2="25" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="30" y2="1000" x2="30" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="35" y2="1000" x2="35" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="40" y2="1000" x2="40" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="45" y2="1000" x2="45" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="50" y2="1000" x2="50" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="55" y2="1000" x2="55" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="60" y2="1000" x2="60" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="65" y2="1000" x2="65" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="70" y2="1000" x2="70" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="75" y2="1000" x2="75" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="80" y2="1000" x2="80" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="85" y2="1000" x2="85" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="90" y2="1000" x2="90" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="95" y2="1000" x2="95" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="100" y2="1000" x2="100" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="105" y2="1000" x2="105" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="110" y2="1000" x2="110" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="115" y2="1000" x2="115" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="120" y2="1000" x2="120" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="125" y2="1000" x2="125" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="130" y2="1000" x2="130" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="135" y2="1000" x2="135" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="140" y2="1000" x2="140" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="145" y2="1000" x2="145" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="150" y2="1000" x2="150" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="155" y2="1000" x2="155" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="160" y2="1000" x2="160" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="165" y2="1000" x2="165" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="170" y2="1000" x2="170" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="175" y2="1000" x2="175" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="180" y2="1000" x2="180" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="185" y2="1000" x2="185" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="190" y2="1000" x2="190" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="195" y2="1000" x2="195" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+	<line y1="-1000" x1="200" y2="1000" x2="200" stroke="black" stroke-dasharray="1.5,1" stroke-width="0.25"/>
+
+	<rect width="2000" height="3" x="-1000" y="-1.5" fill="white"/>
+	<rect width="3" height="2000" x="-1.5" y="-1000" fill="white"/>
+	<g transform="translate(-2,1.25)">
+	  <text x="-80" y="0">X4</text>
+	  <text x="-60" y="0">X3</text>
+	  <text x="-40" y="0">X2</text>
+	  <text x="-20" y="0">X1</text>
+	  <text x="20" y="0">X1</text>
+	  <text x="40" y="0">X2</text>
+	  <text x="60" y="0">X3</text>
+	  <text x="80" y="0">X4</text>
+	</g>
+	<g transform="rotate(90) translate(-1.9,1.25)">
+	  <text x="-80" y="0">Y4</text>
+	  <text x="-60" y="0">Y3</text>
+	  <text x="-40" y="0">Y2</text>
+	  <text x="-20" y="0">Y1</text>
+	  <text x="20" y="0">Y1</text>
+	  <text x="40" y="0">Y2</text>
+	  <text x="60" y="0">Y3</text>
+	  <text x="80" y="0">Y4</text>
+	</g>
+
+	// center mark
+	<path d="M0,0 v-5 a5,5 0 0,0 -5,5 z" fill="black" stroke="black" stroke-width="0.25" />
+	<path d="M0,0 h5 a5,5 0 0,0 -5,-5 z" fill="white" stroke="black" stroke-width="0.25" />
+	<path d="M0,0 v5 a5,5 0 0,0 5,-5 z" fill="black" stroke="black" stroke-width="0.25" />
+	<path d="M0,0 h-5 a5,5 0 0,0 5,5 z" fill="white" stroke="black" stroke-width="0.25" />
 
       </g>
       Sorry, your browser does not support inline SVG.
