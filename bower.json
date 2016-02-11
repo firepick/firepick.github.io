@@ -1,0 +1,23 @@
+{
+  "name": "FirePick Website",
+  "homepage": "https://github.com/firepick/firepick.github.io",
+  "authors": [
+    "Jan Detlefsen <jndetlefsen@gmail.com>"
+  ],
+  "description": "Website of the FirePick project, an open source pick and place machine",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.0",
+    "angular-bootstrap": "^1.1.2"
+  }
+}
