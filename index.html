@@ -7,17 +7,447 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FirePick&trade;</title>
 
-    <link rel="stylesheet" type="text/css" href="css/firepick.css" />
     <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
-  
+    <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css" />
+
   </head>
   <body ng-controller="MainCtrl">
-    <a href="https://github.com/firepick"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/c6625ac1f3ee0a12250227cf83ce904423abf351/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f677261795f3664366436642e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_gray_6d6d6d.png"></a>
-     <div class="container">  
-      <div class="row text-center">
-        <img src="assets/img/firepick.png">
+
+    <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+        <div class="container">
+
+          <div id="logo" class="site-logo text-center">
+            <a href="index.html" rel="home"><img src="assets/img/firepick.png" alt="FirePick" /></a>
+          </div><!-- #logo -->
+
+          <div id="navbar" class="navbar-wrapper text-center">
+            <nav class="navbar navbar-default site-navigation" role="navigation">
+              <ul class="nav navbar-nav navbar-menu">
+
+                <li class="active">
+                  <a href="index.html">Home</a>
+                </li>
+
+                <li>
+                  <a href="/documentation">Documentation</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="principle">Principle</a></li>
+                    <li><a href="faq">FAQ</a></li>
+                    <li><a href="#">Build Instruction</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="detail.html">DIY</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Videos</a>
+                </li>
+
+                <li>
+                  <a href="/community">Community</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="archive.html">Article Archive</a></li>
+                    <li><a href="detail.html">Article Detail</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="detail.html">Visitor</a></li>
+                        <li><a href="detail-login.html">User Login</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Github Repositories</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/firepick">FirePick Organization</a></li>
+                    <li><a href="https://github.com/firepick1/FirePick">FirePick Delta</a></li>
+                    <li><a href="https://github.com/firepick1/FireStep">FireStep</a></li>
+                    <li><a href="https://github.com/firepick1/firenodejs/wiki">FireNodeJS</a></li>
+                    <li><a href="https://github.com/firepick1/FireSight/wiki">FireSight</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Status</a>
+                </li>
+
+
+              </ul><!-- .navbar-menu -->
+            </nav><!-- #site-navigation -->
+          </div><!-- #navbar -->
+
+        </div>
+      </header><!-- #masthead -->
+
+      <div id="features" class="site-hero clearfix">
+        <div class="container">
+
+          <div class="features row">
+            <div class="col-sm-4">
+              <div class="banner-wrapper text-center">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-usd fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="banner-title h3">Affordable</h4>
+                <div class="banner-content">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis, purus quis dictum vitae placerat &hellip;</p>
+                </div>
+                <p><a href="#" class="btn btn-custom btn-sm">Read More</a></p>
+              </div><!-- .banner-wrapper -->
+            </div>
+
+            <div class="col-sm-4">
+              <div class="banner-wrapper text-center">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-creative-commons fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="banner-title h3">Open Source</h4>
+                <div class="banner-content">
+                  <p>Nunc lacus mauris, dictum vitae placerat et, congue eget odio. Praesent pretium condimentum lorem &hellip;</p>
+                </div>
+                <p><a href="#" class="btn btn-custom btn-sm">Read More</a></p>
+              </div><!-- .banner-wrapper -->
+            </div>
+
+            <div class="col-sm-4">
+              <div class="banner-wrapper text-center">
+                <span class="fa-stack fa-3x">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-wrench fa-stack-1x fa-inverse"></i>
+                </span>
+                <h4 class="banner-title h3">Hackable</h4>
+                <div class="banner-content">
+                  <p>Mauris suscipit porttitor lorem eget adipiscing. Ut sed tincidunt sem. Proin quis fermentum massa. Vivamus &hellip;</p>
+                </div>
+                <p><a href="#" class="btn btn-custom btn-sm">Read More</a></p>
+              </div><!-- .banner-wrapper -->
+            </div>
+          </div><!-- .features -->
+
+        </div>
+      </div><!-- .site-hero -->
+
+
+      <div id="main" class="site-main clearfix">
+        <div class="container">
+
+          <div class="content-area">
+            <div class="row">
+
+              <div id="content" class="site-content col-md-12">
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <section class="box-categories">
+                      <h1 class="section-title h4 clearfix"><i class="line"></i>
+                        <i class="fa fa-folder-open-o fa-fw text-muted"></i>
+                        <small class="pull-right"><i class="fa fa-hdd-o fa-fw"></i> 6</small>
+                        Account Settings
+                      </h1>
+                      <ul class="fa-ul">
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Can I Change My Username?</a></h3>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">How Secure Is My Password?</a></h3>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Where Can I Upload My Avatar?</a></h3>
+                        </li>
+                      </ul>
+                      <p class="more-link text-center"><a href="#" class="btn btn-custom btn-xs">View All</a></p>
+                    </section>
+                  </div>
+
+                  <div class="col-md-6">
+                    <section class="box-categories">
+                      <h1 class="section-title h4 clearfix"><i class="line"></i>
+                        <i class="fa fa-folder-open-o fa-fw text-muted"></i>
+                        <small class="pull-right"><i class="fa fa-hdd-o fa-fw"></i> 5</small>
+                        API Questions
+                      </h1>
+                      <ul class="fa-ul">
+                        <li>
+                          <i class="fa-li fa fa-film fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">What Technologies Are Used?</a></h3>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">What Are The API Limits?</a></h3>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Why Was My Developer Application Rejected?</a></h3>
+                        </li>
+                      </ul>
+                      <p class="more-link text-center"><a href="#" class="btn btn-custom btn-xs">View All</a></p>
+                    </section>
+                  </div>
+
+                </div>
+
+<!--                 <section class="section">
+                  <div class="banner-wrapper banner-horizontal clearfix">
+                    <h4 class="banner-title h3">Need more support?</h4>
+                    <div class="banner-content">
+                      <p>If you did not found an answer, contact us for further help.</p>
+                    </div>
+                    <p><a href="#" class="btn btn-custom">Contact Now</a></p>
+                  </div>
+                </section> -->
+
+<!--                 <div class="row">
+                  <div class="col-md-12">
+                    <section class="section">
+                      <h2 class="section-title h4 clearfix">Featured</h2>
+                      <div class="col-md-2">
+                        <a href="https://hackaday.io/project/963-firepick-delta-the-open-source-microfactory">
+                          <img src="/assets/img/hackaday.svg" alt="Hackaday">
+                        </a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="http://hardware.slashdot.org/story/14/07/29/1921200/a-look-at-the-firepick-delta-circuit-board-assembler-video">
+                          <img src="/assets/img/slashdot.svg" alt="Slashdot">
+                        </a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="https://makerfaire.com/maker/entry/50597/">
+                          <img src="/assets/img/makerfaire.jpg" alt="MakerFaire">
+                        </a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="http://techcrunch.com/2014/06/09/the-open-source-electronics-robot-the-firepick-delta-could-bring-real-manufacturing-to-the-desktop/">
+                          <img src="/assets/img/techcrunch.png" alt="Tech Crunch">
+                        </a>
+                      </div>
+                      <div class="col-md-2">
+                        <a href="https://blog.octopart.com/archives/2014/11/firepick-delta">
+                          <img src="/assets/img/octopart.png" alt="Octopart">
+                        </a>
+                      </div>
+                    </section>
+                  </div>
+                </div> -->
+
+                <div class="row">
+
+                  <div class="col-md-6">
+                    <section id="section-lastest-responses" class="section">
+                      <h2 class="section-title h4 clearfix"><i class="line"></i>Latest Responses</h2>
+                      <ul class="fa-ul">
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">How Do I Download The Andoird App?</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 9 hours ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Mobile Apps</a></span>
+                          </small>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Can I Change My Username?</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 5 hours ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Account Settings</a></span>
+                          </small>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-picture-o fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Using Images</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 8 hours ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                          </small>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Using Javascript</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 8 hours ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                          </small>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-film fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Using Video</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 8 hours ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                          </small>
+                        </li>
+                      </ul>
+                    </section><!-- #section-lastest-responses -->
+                  </div>
+
+                  <div class="col-md-6">
+                    <section id="section-lastest-articles" class="section">
+                      <h2 class="section-title h4 clearfix"><i class="line"></i>Latest Articles</h2>
+                      <ul class="fa-ul">
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Using Javascript</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 9 hours ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                          </small>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-picture-o fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Using Images</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 9 hours ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                          </small>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-film fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Using Video</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 9 hours ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                          </small>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">Can I Change My Username?</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 2 days ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Account Settings</a></span>
+                          </small>
+                        </li>
+                        <li>
+                          <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+                          <h3 class="h5"><a href="#">How Do I Download The Andoird App?</a></h3>
+                          <small class="meta text-muted">
+                            <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 5 days ago</span>
+                            <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Mobile Apps</a></span>
+                          </small>
+                        </li>
+                      </ul>
+                    </section><!-- #section-lastest-articles -->
+                  </div>
+
+                </div>
+              </div><!-- #content -->
+
+            </div>
+          </div><!-- .content-area -->
+
+        </div>
       </div>
+
+
+
+      <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="widget-area">
+                <section id="section-about" class="section">
+                  <h2 class="section-title h4 clearfix">About FirePick</h2>
+                  <div class="textwidget">
+                    <p class="text-justify">FirePick Delta is an open-source electronics manufacturing system, inspired by RepRap and powered by OpenPnP and FirePick's own Computer Vision software. Our vision is to create a desktop pick and place machine that is affordable, open source and hackable. This project is currently in alpha stage and not yet feature complete.</p>
+                  </div>
+                </section><!-- #section-about -->
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="widget-area">
+                <section id="section-lastest-articles" class="section">
+                  <h2 class="section-title h4 clearfix"><i class="line"></i>Issue Tracker</h2>
+                  <ul class="fa-ul">
+                    <li>
+                      <i class="fa-li fa fa-github-alt fa-fw text-muted"></i>
+                      <h3 class="h5"><a href="#">Using Javascript</a></h3>
+                      <small class="meta text-muted">
+                        <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 9 hours ago</span>
+                        <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                      </small>
+                    </li>
+                    <li>
+                      <i class="fa-li fa fa-github-alt fa-fw text-muted"></i>
+                      <h3 class="h5"><a href="#">Using Images</a></h3>
+                      <small class="meta text-muted">
+                        <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 9 hours ago</span>
+                        <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                      </small>
+                    </li>
+                    <li>
+                      <i class="fa-li fa fa-github-alt fa-fw text-muted"></i>
+                      <h3 class="h5"><a href="#">Using Video</a></h3>
+                      <small class="meta text-muted">
+                        <span class="time"><i class="fa fa-clock-o fa-fw"></i> about 9 hours ago</span>
+                        <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="#">Customization</a></span>
+                      </small>
+                    </li>
+                  </ul>
+                </section><!-- #section-lastest-articles -->
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="widget-area">
+                <section id="section-newsletter" class="section">
+                  <h2 class="section-title h4 clearfix">Join the Project</h2>
+                  <div class="textwidget">
+                    <p>There are many ways you can </p>
+                    <form action="" method="post">
+                      <div class="input-group">
+                        <input type="email" class="form-control" title="Enter your email" placeholder="Your email..." />
+                        <span class="input-group-btn">
+                        <button type="submit" class="btn btn-custom">Subscribe</button>
+                        </span>
+                      </div>
+                    </form>
+                  </div>
+                </section><!-- #section-newsletter -->
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <hr />
+          </div>
+
+          <div class="row">
+            <div class="site-info col-md-6">
+              <p class="text-muted">Copyright &copy; 2016 <a href="#">FirePick</a>. All Rights Reserved.</p>
+            </div><!-- .site-info -->
+
+            <div class="site-social text-right col-md-6">
+              <ul class="list-inline hidden-print">
+                <!--<li><a href="#" class="btn btn-social btn-facebook"><i class="fa fa-facebook fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-twitter"><i class="fa fa-twitter fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-google-plus"><i class="fa fa-google-plus fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-linkedin"><i class="fa fa-linkedin fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-vimeo"><i class="fa fa-vimeo-square fa-fw"></i></a></li>
+
+                <li><a href="#" class="btn btn-social btn-pinterest"><i class="fa fa-pinterest fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-dribbble"><i class="fa fa-dribbble fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-flickr"><i class="fa fa-flickr fa-fw"></i></a></li> -->
+                <li><a href="https://www.youtube.com/channel/UCmjDtrPYQKJhSwK430lPMZg" class="btn btn-social btn-youtube"><i class="fa fa-youtube-play fa-fw"></i></a></li>
+                <li><a href="https://github.com/firepick" class="btn btn-social btn-github"><i class="fa fa-github fa-fw"></i></a></li>
+              </ul>
+            </div><!-- .site-social -->
+          </div>
+
+        </div>
+      </footer><!-- #colophon -->
+
+    </div><!-- #page -->
+
+<!--     <div class="container">
       <div class="row">
         <div class="page-header">The open source micro-factory</div>
       </div>
@@ -38,11 +468,16 @@
             <a href=https://github.com/firepick1/FireSight/wiki>FireSight</a> Create custom computer vision pipelines without programming.
           </li>
         </ul>
-      </div>
-    </div>
-  <!-- Scripts -->
-  <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
-  <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-  <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+      </div> -->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/superfish/dist/js/superfish.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/assets/js/mobilemenu.js"></script>
+    <script type="text/javascript" src="/assets/js/app.js"></script>
   </body>
 </html>
