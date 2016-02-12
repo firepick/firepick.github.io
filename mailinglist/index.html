@@ -1,0 +1,254 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html ng-app="sampleApp">
+  <head profile="http://www.w3.org/2005/10/profile">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirePick&trade;</title>
+
+    <link rel="stylesheet" type="text/css" href="/bower_components/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css" />
+
+  </head>
+  <body ng-controller="sampleCtrl">
+
+    <div id="page" class="hfeed site">
+      <header id="masthead" class="site-header" role="banner">
+        <div class="container">
+
+          <div id="logo" class="site-logo text-center">
+            <a href="index.html" rel="home"><img src="/assets/img/firepick.png" alt="FirePick" /></a>
+          </div><!-- #logo -->
+
+          <div id="navbar" class="navbar-wrapper text-center">
+            <nav class="navbar navbar-default site-navigation" role="navigation">
+              <ul class="nav navbar-nav navbar-menu">
+
+                <li>
+                  <a href="/index.html">Home</a>
+                </li>
+
+                <li class="active">
+                  <a href="/community">Community</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="#">Videos</a>
+                    </li>
+                    <li>
+                      <a href="mailinglist">Mailing List</a>
+                    </li>
+                    <li>
+                      <a href="detail.html">Article Detail</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="detail.html">Visitor</a></li>
+                        <li><a href="detail-login.html">User Login</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="/documentation">Documentation</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a href="principle">Working Principle</a>
+                    </li>
+                    <li>
+                      <a href="faq">FAQ</a>
+                    </li>
+                    <li>
+                      <a href="#">Build Instruction</a>
+                      <ul class="dropdown-menu">
+                        <li><a href="detail.html">DIY</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="#">Github Repositories</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/firepick">FirePick Organization</a></li>
+                    <li><a href="https://github.com/firepick1/FirePick">FirePick Delta</a></li>
+                    <li><a href="https://github.com/firepick1/FireStep">FireStep</a></li>
+                    <li><a href="https://github.com/firepick1/firenodejs/wiki">FireNodeJS</a></li>
+                    <li><a href="https://github.com/firepick1/FireSight/wiki">FireSight</a></li>
+                  </ul>
+                </li>
+
+                <li>
+                  <a href="issues">Issue Tracker</a>
+                </li>
+
+              </ul><!-- .navbar-menu -->
+            </nav><!-- #site-navigation -->
+          </div><!-- #navbar -->
+
+        </div>
+      </header><!-- #masthead -->
+
+      <div id="main" class="site-main clearfix">
+        <div class="container">
+
+          <div class="content-area">
+            <div class="row">
+
+              <div id="content" class="site-content col-md-12">
+
+                <iframe id="forum_embed"
+                 src="javascript:void(0)"
+                 scrolling="no"
+                 frameborder="0"
+                 width="1100"
+                 height="700">
+                </iframe>
+
+                <script type="text/javascript">
+                 document.getElementById("forum_embed").src =
+                  "https://groups.google.com/forum/embed/?place=forum/firepick" +
+                  "&showsearch=true&showpopout=true&parenturl=" +
+                  encodeURIComponent(window.location.href);
+                </script>
+
+              </div><!-- #content -->
+
+            </div>
+          </div><!-- .content-area -->
+
+        </div>
+      </div>
+
+
+
+      <footer id="colophon" class="site-footer" role="contentinfo">
+        <div class="container">
+
+          <div class="row">
+            <div class="col-md-4">
+              <div class="widget-area">
+                <section id="section-about" class="section">
+                  <h2 class="section-title h4 clearfix">About FirePick</h2>
+                  <div class="textwidget">
+                    <p class="text-justify">FirePick Delta is an open-source electronics manufacturing system, inspired by RepRap and powered by OpenPnP and FirePick's own Computer Vision software. Our vision is to create a desktop pick and place machine that is affordable, open source and hackable. This project is currently in alpha stage and not yet feature complete.</p>
+                  </div>
+                </section><!-- #section-about -->
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="widget-area">
+                <section id="section-lastest-articles" class="section">
+                  <h2 class="section-title h4 clearfix"><i class="line"></i>Issue Tracker</h2>
+                  <ul class="fa-ul">
+                    <li ng-repeat="issue in issues.firepick | limitTo:3">
+                      <i class="fa-li fa fa-github-alt fa-fw text-muted"></i>
+                      <h3 class="h5"><a href="{{ issue.url }}">{{ issue.title }}</a></h3>
+                      <small class="meta text-muted">
+                        <span class="label label-primary">{{ issue.state }}</span>
+                        <span class="time"><i class="fa fa-clock-o fa-fw"></i> <span am-time-ago="issue.date"></span></span>
+                        <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="{{ issue.repoIssueUrl }}">{{ issue.repoName }}</a></span>
+                      </small>
+                    </li>
+                  </ul>
+                </section><!-- #section-lastest-articles -->
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="widget-area">
+                <section id="section-newsletter" class="section">
+                  <h2 class="section-title h4 clearfix">Join us on Slack</h2>
+                  <div class="textwidget">
+                    <div class="media">
+                      <a class="pull-left" href="#"><img src="/assets/img/slack.svg" alt="" width="40" height="40" class="media-object"></a>
+                      <div class="media-body">
+                        <p>Slack is the instant messenging collaboration tools for this project, just enter your email and get an invite. <a href="https://slack.com/">More about Slack.</a></p>
+                      </div>
+                    </div>
+
+                    <form ng-submit="createUser()">
+                      <div class="form-group">
+                        <p class="form-control-static" ng-show="postSuccess"><strong><em>Thank you, you will get an invite shortly</em></strong></p>
+                        <input type="email"  ng-model="user.email" class="form-control" title="Enter your email" placeholder="Enter your email" ng-hide="postSuccess"/>
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-custom" ng-disabled="postSuccess"><i class="fa fa-slack fa-fw"></i> Get Slack Invite</button>
+                      </div>
+                    </form>
+                  </div>
+                </section><!-- #section-newsletter -->
+              </div>
+            </div>
+
+            <div class="clearfix"></div>
+            <hr />
+          </div>
+
+          <div class="row">
+            <div class="site-info col-md-6">
+              <p class="text-muted">Copyright &copy; 2016 <a href="#">FirePick</a>. All Rights Reserved.</p>
+            </div><!-- .site-info -->
+
+            <div class="site-social text-right col-md-6">
+              <ul class="list-inline hidden-print">
+                <!--<li><a href="#" class="btn btn-social btn-facebook"><i class="fa fa-facebook fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-twitter"><i class="fa fa-twitter fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-google-plus"><i class="fa fa-google-plus fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-linkedin"><i class="fa fa-linkedin fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-vimeo"><i class="fa fa-vimeo-square fa-fw"></i></a></li>
+
+                <li><a href="#" class="btn btn-social btn-pinterest"><i class="fa fa-pinterest fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-dribbble"><i class="fa fa-dribbble fa-fw"></i></a></li>
+                <li><a href="#" class="btn btn-social btn-flickr"><i class="fa fa-flickr fa-fw"></i></a></li> -->
+                <li><a href="https://www.youtube.com/channel/UCmjDtrPYQKJhSwK430lPMZg" class="btn btn-social btn-youtube"><i class="fa fa-youtube-play fa-fw"></i></a></li>
+                <li><a href="https://github.com/firepick" class="btn btn-social btn-github"><i class="fa fa-github fa-fw"></i></a></li>
+              </ul>
+            </div><!-- .site-social -->
+          </div>
+
+        </div>
+      </footer><!-- #colophon -->
+
+    </div><!-- #page -->
+
+<!--     <div class="container">
+      <div class="row">
+        <div class="page-header">The open source micro-factory</div>
+      </div>
+      <div class="row">
+        <ul>
+          <li>
+            <a href=https://github.com/firepick1/FirePick>FirePick Delta</a> A delta manufacturing robot for pick-and-place (PnP)
+          </li>
+          <li>
+            <a href=https://github.com/firepick1/FireStep>FireStep stepper driver</a> A smooth motion-control library (Arduino Mega2560, Due, MotionBoard)
+          </li>
+          <li>
+            <a href=https://github.com/firepick1/firenodejs/wiki>
+            <img src="assets/img/firenodejs-alpha.png">
+            </a> A REST protocol for coordinating machine vision, sensing and control.
+          </li>
+          <li>
+            <a href=https://github.com/firepick1/FireSight/wiki>FireSight</a> Create custom computer vision pipelines without programming.
+          </li>
+        </ul>
+      </div> -->
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="/bower_components/firebase/firebase.js"></script>
+    <script type="text/javascript" src="/bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script type="text/javascript" src="/bower_components/moment/moment.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-moment/angular-moment.js"></script>
+    <script type="text/javascript" src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/superfish/dist/js/superfish.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="/assets/js/mobilemenu.js"></script>
+    <script type="text/javascript" src="/assets/js/jqueryapp.js"></script>
+    <script type="text/javascript" src="/assets/js/angularapp.js"></script>
+  </body>
+</html>
