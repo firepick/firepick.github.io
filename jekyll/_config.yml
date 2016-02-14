@@ -19,6 +19,8 @@ github_username:  jandetlefsen
 # Build settings
 markdown: kramdown
 
+relative_permalinks: false
+
 collections:
   faq:
     output: true
