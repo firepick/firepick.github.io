@@ -1,0 +1,14 @@
+<section id="section-lastest-articles" class="section">
+  <h2 class="section-title h4 clearfix"><i class="line"></i>Issue Tracker</h2>
+  <ul class="fa-ul">
+    <li ng-repeat="issue in issues.firepick | limitTo:3">
+      <i class="fa-li fa fa-github-alt fa-fw text-muted"></i>
+      <h3 class="h5"><a href="{{ issue.url }}">{{ issue.title }}</a></h3>
+      <small class="meta text-muted">
+        <span class="label label-primary">{{ issue.state }}</span>
+        <span class="time"><i class="fa fa-clock-o fa-fw"></i> <span am-time-ago="issue.date"></span></span>
+        <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="{{ issue.repoIssueUrl }}">{{ issue.repoName }}</a></span>
+      </small>
+    </li>
+  </ul>
+</section><!-- #section-lastest-articles -->

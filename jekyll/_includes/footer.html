@@ -4,57 +4,19 @@
           <div class="row">
             <div class="col-md-4">
               <div class="widget-area">
-                <section id="section-about" class="section">
-                  <h2 class="section-title h4 clearfix">About FirePick</h2>
-                  <div class="textwidget">
-                    <p class="text-justify">FirePick Delta is an open-source electronics manufacturing system, inspired by RepRap and powered by OpenPnP and FirePick's own Computer Vision software. Our vision is to create a desktop pick and place machine that is affordable, open source and hackable. This project is currently in alpha stage and not yet feature complete.</p>
-                  </div>
-                </section><!-- #section-about -->
+                {% include about_block.html %}
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="widget-area">
-                <section id="section-lastest-articles" class="section">
-                  <h2 class="section-title h4 clearfix"><i class="line"></i>Issue Tracker</h2>
-                  <ul class="fa-ul">
-                    <li ng-repeat="issue in issues.firepick | limitTo:3">
-                      <i class="fa-li fa fa-github-alt fa-fw text-muted"></i>
-                      <h3 class="h5"><a href="{{ issue.url }}">{{ issue.title }}</a></h3>
-                      <small class="meta text-muted">
-                        <span class="label label-primary">{{ issue.state }}</span>
-                        <span class="time"><i class="fa fa-clock-o fa-fw"></i> <span am-time-ago="issue.date"></span></span>
-                        <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> <a href="{{ issue.repoIssueUrl }}">{{ issue.repoName }}</a></span>
-                      </small>
-                    </li>
-                  </ul>
-                </section><!-- #section-lastest-articles -->
+                {% include issues_block.html %}
               </div>
             </div>
 
             <div class="col-md-4">
               <div class="widget-area">
-                <section id="section-newsletter" class="section">
-                  <h2 class="section-title h4 clearfix">Join us on Slack</h2>
-                  <div class="textwidget">
-                    <div class="media">
-                      <a class="pull-left" href="#"><img src="/assets/images/slack.svg" alt="" width="40" height="40" class="media-object"></a>
-                      <div class="media-body">
-                        <p>Slack is the instant messenging collaboration tools for this project, just enter your email and get an invite. <a href="https://slack.com/">More about Slack.</a></p>
-                      </div>
-                    </div>
-
-                    <form ng-submit="createUser()">
-                      <div class="form-group">
-                        <p class="form-control-static" ng-show="postSuccess"><strong><em>Thank you, you will get an invite shortly</em></strong></p>
-                        <input type="email"  ng-model="user.email" class="form-control" title="Enter your email" placeholder="Enter your email" ng-hide="postSuccess"/>
-                      </div>
-                      <div class="form-group">
-                        <button type="submit" class="btn btn-custom" ng-disabled="postSuccess"><i class="fa fa-slack fa-fw"></i> Get Slack Invite</button>
-                      </div>
-                    </form>
-                  </div>
-                </section><!-- #section-newsletter -->
+                {% include slack_block.html %}
               </div>
             </div>
 
@@ -80,16 +42,4 @@
 
     </div><!-- #page -->
 
-    <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
-    <script type="text/javascript" src="/bower_components/firebase/firebase.js"></script>
-    <script type="text/javascript" src="/bower_components/angularfire/dist/angularfire.min.js"></script>
-    <script type="text/javascript" src="/bower_components/moment/moment.js"></script>
-    <script type="text/javascript" src="/bower_components/angular-moment/angular-moment.js"></script>
-    <script type="text/javascript" src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/bower_components/superfish/dist/js/superfish.min.js"></script>
-    <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
-    <script type="text/javascript" src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
-    <script type="text/javascript" src="/assets/js/mobilemenu.js"></script>
-    <script type="text/javascript" src="/assets/js/jqueryapp.js"></script>
-    <script type="text/javascript" src="/assets/js/angularapp.js"></script>
+{% include scripts.html %}
