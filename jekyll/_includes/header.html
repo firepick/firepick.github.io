@@ -1,0 +1,71 @@
+      <header id="masthead" class="site-header" role="banner">
+        <div class="container">
+
+          <div id="logo" class="site-logo text-center">
+            <a href="index.html" rel="home"><img src="/assets/images/firepick.png" alt="FirePick" /></a>
+          </div><!-- #logo -->
+
+          <div id="navbar" class="navbar-wrapper text-center">
+            <nav class="navbar navbar-default site-navigation" role="navigation">
+              <ul class="nav navbar-nav navbar-menu">
+                {% if page.active == "index" %}
+                  <li class="active">
+                {% else %}
+                  <li>
+                {% endif %}
+                    <a href="/">Home</a></li>
+
+                {% if page.active == "community" %}
+                  <li class="active">
+                {% else %}
+                  <li>
+                {% endif %}
+                  <a>Community</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/videos">Videos</a></li>
+                    <li><a href="/mailinglist">Mailing List</a></li>
+                  </ul>
+                </li>
+
+                {% if page.active == "documentation" %}
+                  <li class="active">
+                {% else %}
+                  <li>
+                {% endif %}
+                  <a>Documentation</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="/principle">Working Principle</a></li>
+                    <li><a href="/faq">FAQ</a></li>
+                    <li><a href="/instructions">Build Instruction</a></li>
+                  </ul>
+                </li>
+
+                {% if page.active == "github" %}
+                  <li class="active">
+                {% else %}
+                  <li>
+                {% endif %}
+                  <a>Github Repositories</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="https://github.com/firepick">FirePick Organization</a></li>
+                    <li><a href="https://github.com/firepick1/FirePick">FirePick Delta</a></li>
+                    <li><a href="https://github.com/firepick1/FireStep">FireStep</a></li>
+                    <li><a href="https://github.com/firepick1/firenodejs/wiki">FireNodeJS</a></li>
+                    <li><a href="https://github.com/firepick1/FireSight/wiki">FireSight</a></li>
+                  </ul>
+                </li>
+
+                {% if page.active == "issues" %}
+                  <li class="active">
+                {% else %}
+                  <li>
+                {% endif %}
+                  <a href="/issues">Issue Tracker</a>
+                </li>
+
+              </ul><!-- .navbar-menu -->
+            </nav><!-- #site-navigation -->
+          </div><!-- #navbar -->
+
+        </div>
+      </header><!-- #masthead -->

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+
+  {% include head.html %}
+
+  <body ng-controller="sampleCtrl">
+    <div id="page" class="hfeed site">
+
+    {% include header.html %}
+
+    <div class="page-content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </div>
+
+    {% include footer.html %}
+
+    </div>
+  </body>
+</html>

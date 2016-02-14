@@ -1,0 +1,17 @@
+---
+layout: page
+permalink: /faq/
+active: documentation
+---
+<div id="main" class="site-main clearfix">
+  <div class="container">
+    FAQ index
+    <ul>
+    {% for post in site.faq %}
+       <li>
+          <a href="{{ post.url }}">{{ post.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
