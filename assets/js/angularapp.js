@@ -28,7 +28,6 @@ app.controller('sampleCtrl', function($scope, $http, $firebaseObject) {
       }
 	}).then(function(response){
 		$scope.postSuccess = true
-		$scope.postSuccessMessage = 'Thanks for your submission. You will get an invite shortly.'
 	})
   }
 })
