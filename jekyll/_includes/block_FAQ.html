@@ -1,0 +1,16 @@
+<section class="box-universal">
+  <h2 class="section-title h4 clearfix"><i class="line"></i>
+    <i class="fa fa-folder-open-o fa-fw text-muted"></i>
+    Latest FAQ
+  </h2>
+  <ul class="fa-ul">
+    {% for faq in site.faq limit:10 %}
+    <li>
+      <i class="fa-li fa fa-list-alt fa-fw text-muted"></i>
+      <h3 class="h5"><a href="{{ faq.url }}">{{ faq.title }}</a></h3>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="more-link text-center"><a href="/faq" class="btn btn-custom btn-xs">View All</a></p>
+</section>
+<!-- #section-lastest-articles -->

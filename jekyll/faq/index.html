@@ -1,14 +1,25 @@
 ---
-title: FAQ Index
+title: FAQ
 layout: faq
 permalink: /faq/
 active: documentation
 ---
+<div class="archive-list archive-article">
+  {% for faq in site.faq %}
+  <article class="hentry">
+    <header class="entry-header">
+      <i class="fa fa-list-alt fa-2x fa-fw pull-left text-muted"></i>
+      <h2 class="entry-title h4"><a href="{{ faq.url }}" rel="bookmark">{{ faq.title }}</a></h2>
+    </header><!-- .entry-header -->
 
-<ul>
-{% for post in site.faq %}
-   <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+    <footer class="entry-footer">
+      <div class="entry-meta text-muted">
+        <span class="date"><i class="fa fa-clock-o fa-fw"></i> <time>{{ faq.date | date: '%B %d, %Y' }}</time></span>
+        {% for tag in faq.categories %}
+          <span class="category"><i class="fa fa-folder-open-o fa-fw"></i> {{ tag }}</span>
+        {% endfor %}
+      </div><!-- .entry-meta -->
+    </footer><!-- .entry-footer -->
+  </article><!-- .hentry -->
   {% endfor %}
-</ul>
+</div>

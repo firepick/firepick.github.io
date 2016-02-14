@@ -1,31 +1,30 @@
 ---
 layout: default
 ---
-<div id="content" class="site-content col-md-9">
-  <article class="hentry">
-    <header class="entry-header">
-      <h1 class="entry-title">{{ page.title }}</h1>
-    </header>
-    <!-- .entry-header -->
-    <div class="entry-content clearfix">
-      {{ content }}
-    </div>
-    <!-- .entry-content -->
-  </article>
-  <!-- .hentry -->
-</div>
-<div id="sidebar" class="site-sidebar col-md-3">
-  <div class=""widget-area>
-    <section id="section-categories" class="section">
-      <h2 class="section-title h4 clearfix"><i class="line"></i>Categories</h2>
-        <ul class="nav nav-pills nav-stacked nav-categories">
-          <li><a href="#"><span class="badge pull-right">6</span>Account Settings</a></li>
-          <li><a href="#"><span class="badge pull-right">5</span>API Questions</a></li>
-          <li><a href="#"><span class="badge pull-right">3</span>Customization</a></li>
-          <li><a href="#"><span class="badge pull-right">11</span>Mobile Apps</a></li>
-        </ul>
-  	</section>
-  	<!-- #section-categories -->
+<div class="row">
+  <div id="content" class="site-content col-md-9">
+    <article class="hentry">
+      <header class="entry-header">
+        <h1 class="entry-title">{{ page.title }}</h1>
+      </header>
+      <!-- .entry-header -->
+      <div class="entry-content clearfix">
+        {{ content }}
+      </div>
+      <!-- .entry-content -->
+    </article>
+    <!-- .hentry -->
   </div>
+  <div id="sidebar" class="site-sidebar col-md-3">
+    <div class=""widget-area>
+      <section id="section-categories" class="section">
+        <h2 class="section-title h4 clearfix"><i class="line"></i>Categories</h2>
+        <ul class="nav nav-pills nav-stacked nav-categories">
+<!--             <li><a href="#"><span class="badge pull-right">6</span></a></li> -->
+        </ul>
+      </section>
+      <!-- #section-categories -->
+    </div>
+  </div>
+  <!-- #sidebar -->
 </div>
-<!-- #sidebar -->

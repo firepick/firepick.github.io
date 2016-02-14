@@ -961,26 +961,26 @@ ol.with-line-border > li {
 }
 
 /*	Categories	*/
-.box-categories {
+.box-universal {
 	margin-bottom: 30px;
 }
-.box-categories .section-title {
+.box-universal .section-title {
 	margin-bottom: 0.5em;
 }
-.box-categories .section-title > i.line {
+.box-universal .section-title > i.line {
 	width: 1.15em;
 }
-.box-categories .section-title small {
+.box-universal .section-title small {
 	line-height: 1.15em;
 }
-.box-categories  .fa-ul > li {
+.box-universal  .fa-ul > li {
 	margin-bottom: 0.5em;
 }
-.box-categories  .fa-ul > li > * {
+.box-universal  .fa-ul > li > * {
 	margin: 0;
 	line-height: inherit;
 }
-.box-categories  .more-link {
+.box-universal  .more-link {
 	height: 11px;
 	border-bottom: 1px solid #eee;
 }

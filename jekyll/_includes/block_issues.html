@@ -1,5 +1,7 @@
-<section id="section-lastest-articles" class="section">
-  <h2 class="section-title h4 clearfix"><i class="line"></i>Issue Tracker</h2>
+<section class="box-universal">
+  <h2 class="section-title h4 clearfix"><i class="line"></i>
+    <i class="fa fa-folder-open-o fa-fw text-muted"></i>Latest Issue
+  </h2>
   <ul class="fa-ul">
     <li ng-repeat="issue in issues.firepick | limitTo:3">
       <i class="fa-li fa fa-github-alt fa-fw text-muted"></i>
@@ -11,4 +13,6 @@
       </small>
     </li>
   </ul>
-</section><!-- #section-lastest-articles -->
+  <p class="more-link text-center"><a href="/issues" class="btn btn-custom btn-xs">View All</a></p>
+</section>
+<!-- #section-lastest-articles -->
