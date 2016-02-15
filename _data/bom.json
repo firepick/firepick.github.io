@@ -1,0 +1,12 @@
+[{
+    "core": [{
+        "stepper_assembly": [{
+            "id": "1.2.1.",
+            "qty": 6,
+            "title": "Delta Motor Assembly - 608 Bearing Block & Cap",
+            "type": "3D Printed",
+            "filename": "3D0001 - Delta motor Assembly - 608 bearing block.stl",
+            "repoLink": "https://github.com/firepick1/FPD-LooseCanon/raw/dev/mechanical/3Dxxxx%20-%203D%20printed%20parts/STL/3D0001%20-%20Delta%20motor%20Assembly%20-%20608%20bearing%20block.stl"
+        }]
+    }]
+}]
