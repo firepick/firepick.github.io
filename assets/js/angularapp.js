@@ -14,6 +14,14 @@ app.controller('sampleCtrl', function($scope, $http, $firebaseObject) {
 
   $scope.postSuccess = false
 
+  $scope.someissue = 'whatever'
+
+  $http.get("https://api.github.com/repos/firepick/firepick.github.io/issues")
+  .success(function(data) {
+      $scope.aaa = data[0].body
+      console.log(data[0].body)
+  })
+
   $scope.createUser = function() {
     $http({
       method : 'POST',
