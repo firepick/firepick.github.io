@@ -4,4 +4,4 @@ layout: page
 permalink: /principle/
 active: documentation
 ---
-![Alt text](/assets/images/fpd-schema.jpg?raw=true "Optional Title")
+![System Level Diagram](/assets/images/firepick-delta-system-level-diagram.png?raw=true "System Level Diagram")
