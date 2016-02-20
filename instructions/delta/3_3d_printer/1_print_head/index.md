@@ -1,0 +1,7 @@
+---
+title: Print Head
+permalink: /instructions/delta/3_3d_printer/1_print_head/index.html
+layout: delta_instructions
+active: documentation
+---
+instructions -> delta -> 3d printer -> print head
