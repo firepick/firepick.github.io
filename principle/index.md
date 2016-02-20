@@ -1,5 +1,6 @@
 ---
 title: Working Principle
+breadcrumb: Working Principle
 layout: page
 permalink: /principle/
 active: documentation
