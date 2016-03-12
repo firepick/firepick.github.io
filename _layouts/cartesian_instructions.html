@@ -20,8 +20,12 @@ layout: default
       <section id="section-categories" class="section">
         <h2 class="section-title h4 clearfix"><i class="line"></i>Build Sections</h2>
         <ul class="nav nav-pills nav-stacked nav-categories">
-          <li><a href="/instructions/cartesian/1_core">1. <strong>Cartesian Core</strong></a></li>
-          <li><a href="/instructions/cartesian/1_core/1_frame"><i class="fa fa-long-arrow-right"></i> 1.1. <strong>Cartesian Frame</strong></a></li>
+          <li{% if page.cartesian_sidebar_active == "1" %} class="active"{% endif %}>
+            <a href="/instructions/cartesian/1_core">1. <strong>Cartesian Core</strong></a>
+          </li>
+          <li{% if page.cartesian_sidebar_active == "1.1" %} class="active"{% endif %}>
+            <a href="/instructions/cartesian/1_core/1_frame"><i class="fa fa-long-arrow-right"></i> 1.1. <strong>Cartesian Frame</strong></a>
+          </li>
         </ul>
       </section>
       <!-- #section-categories -->
