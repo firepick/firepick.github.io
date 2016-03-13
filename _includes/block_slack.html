@@ -11,7 +11,12 @@
     <form ng-submit="createUser()">
       <div class="form-group">
         <p class="form-control-static" ng-show="postSuccess"><strong><em>Thank you, you will get an invite shortly</em></strong></p>
-        <input type="email"  ng-model="user.email" class="form-control" title="Enter your email" placeholder="Enter your email" ng-hide="postSuccess"/>
+        <input type="email" ng-model="user.email" class="form-control" title="Enter your email" placeholder="Enter your email" ng-hide="postSuccess"/>
+      </div>
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" ng-model="user.google_group" value="true" ng-hide="postSuccess">Add me to the Mailing List
+        </label>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-custom" ng-disabled="postSuccess"><i class="fa fa-slack fa-fw"></i> Get Slack Invite</button>
