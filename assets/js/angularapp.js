@@ -14,8 +14,6 @@ app.controller('sampleCtrl', function($scope, $http, $firebaseObject) {
 
   $scope.postSuccess = false
 
-  $scope.someissue = 'whatever'
-
   $http.get("https://api.github.com/repos/firepick/firepick.github.io/issues")
   .success(function(data) {
       $scope.aaa = data[0].body
@@ -28,7 +26,8 @@ app.controller('sampleCtrl', function($scope, $http, $firebaseObject) {
       url : '//formspree.io/jndetlefsen@gmail.com',
       data : $.param({
       	request: 'slack signup',
-      	email: $scope.user.email
+      	email: $scope.user.email,
+        google_group: $scope.user.google_group
       }),
       headers : {
       	'Accept': 'application/json',
