@@ -13,7 +13,7 @@
         <p class="form-control-static" ng-show="postSuccess"><strong><em>Thank you, you will get an invite shortly</em></strong></p>
         <input type="email" ng-model="user.email" class="form-control" title="Enter your email" placeholder="Enter your email" ng-hide="postSuccess"/>
       </div>
-      <div class="checkbox">
+      <div class="checkbox" ng-hide="postSuccess">
         <label>
           <input type="checkbox" ng-model="user.google_group" value="true" ng-hide="postSuccess">Add me to the Mailing List
         </label>
